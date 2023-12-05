@@ -8,6 +8,7 @@ import Header from './components/Header'
 import EmptyState from './components/EmptyState'
 import Spinner from './components/Spinner'
 import { getErrorMessage } from './Helper'
+import Foooter from './components/Footer'
 
 /**
  * Courses component
@@ -130,7 +131,7 @@ const Courses = () => {
             <label htmlFor="desktop-search-candidate" className="sr-only">
               Search
             </label>
-            <div className="flex justify-between rounded-md shadow-sm">
+            <div className="md:flex md:justify-between rounded-md shadow-sm">
               <div className="relative flex-grow focus-within:z-10">
                 <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
                   <MagnifyingGlassIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
@@ -154,7 +155,7 @@ const Courses = () => {
               </div>
               <a
                 href="/courses/add"
-                className="inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 ml-3 text-sm text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 ml-0 md:ml-3 text-sm text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 mt-3 md:mt-0 w-full md:w-auto"
               >
                 <PlusSmallIcon className="-ml-1.5 h-5 w-5" aria-hidden="true" />
                 New course
@@ -308,71 +309,7 @@ const Courses = () => {
         </section>
       </main>
 
-      <footer aria-labelledby="footer-heading" className="bg-white">
-        <h2 id="footer-heading" className="sr-only">
-          Footer
-        </h2>
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-4 gap-8 border-t border-gray-200 py-20 sm:grid-cols-2 sm:gap-y-0 lg:grid-cols-4">
-            <div>
-              <h3 className="text-sm font-medium text-gray-900">Account</h3>
-              <ul className="mt-6 space-y-6">
-                {footerNavigation.account.map((item) => (
-                  <li key={item.name} className="text-sm">
-                    <a href={item.href} className="text-gray-500 hover:text-gray-600">
-                      {item.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-sm font-medium text-gray-900">Service</h3>
-              <ul className="mt-6 space-y-6">
-                {footerNavigation.service.map((item) => (
-                  <li key={item.name} className="text-sm">
-                    <a href={item.href} className="text-gray-500 hover:text-gray-600">
-                      {item.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-sm font-medium text-gray-900">Company</h3>
-              <ul className="mt-6 space-y-6">
-                {footerNavigation.company.map((item) => (
-                  <li key={item.name} className="text-sm">
-                    <a href={item.href} className="text-gray-500 hover:text-gray-600">
-                      {item.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-sm font-medium text-gray-900">Connect</h3>
-              <ul className="mt-6 space-y-6">
-                {footerNavigation.connect.map((item) => (
-                  <li key={item.name} className="text-sm">
-                    <a href={item.href} className="text-gray-500 hover:text-gray-600">
-                      {item.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-100 py-10 sm:flex sm:items-center sm:justify-between">
-            <div className="flex items-center justify-center text-sm text-gray-500">
-              <p>Shipping to Canada ($CAD)</p>
-              <p className="ml-3 border-l border-gray-200 pl-3">English</p>
-            </div>
-            <p className="mt-6 text-center text-sm text-gray-500 sm:mt-0">&copy; 2021 Your Company, Inc.</p>
-          </div>
-        </div>
-      </footer>
+      <Foooter />
     </div>
   )
 }
