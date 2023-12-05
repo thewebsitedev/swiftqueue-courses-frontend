@@ -1,3 +1,5 @@
+// Type definitions for the application
+
 import { ReactNode } from "react";
 
 export type AuthContextType = {

@@ -7,17 +7,20 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 
 /**
  * Register screen
- * @returns 
+ *
+ * @returns {JSX.Element} register screen
  */
 const Register = () => {
   
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [success, setSuccess] = useState('')
-
+  // useNavigate hook
   const navigate = useNavigate()
+  // get user, register function and error from AuthContext
   const { user, register, error } = useAuth();
 
+  // redirect if user is logged in
   useEffect(() => {
     if (user) {
       setSuccess('You are already registered.');
@@ -27,8 +30,15 @@ const Register = () => {
     }
   }, [user, navigate]);
 
-  const handleLoginSubmit = async (e: any) => {
+  /**
+   * Handle register form submit
+   * 
+   * @param {React.FormEvent} e form event
+   * @returns void
+   */
+  const handleRegisterSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+    setSuccess('');
     register({ email, password });
   }
 
@@ -102,7 +112,7 @@ const Register = () => {
                 <button
                   type="submit"
                   className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                  onClick={handleLoginSubmit}
+                  onClick={handleRegisterSubmit}
                 >
                   Register
                 </button>

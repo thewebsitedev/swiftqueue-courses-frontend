@@ -1,6 +1,38 @@
-# Getting Started
+# Swiftqueue Courses App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Description
+
+This is a simple app that displays a list of courses and their details. It is built with React and Typescript. It uses the [Swiftqueue Courses API](https://github.com/thewebsitedev/swiftqueue-courses.git) to fetch the courses data.
+
+## Frameworks and Libraries
+
+- [React](https://reactjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [React Router](https://reactrouter.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+- [Jest](https://jestjs.io/)
+- [Heroicons](https://heroicons.com/)
+
+## Features
+
+- Display a list of courses
+- Display a course details
+- User registration
+- Logged in user can search for a course
+- Logged in user can filter courses by status
+- Logged in user can sort courses by newest and oldest
+- Any logged in user can add and update a course
+
+## Installation
+
+- Clone the repository
+- Run `npm install` to install dependencies
+- Run `npm start` to start the app
+
+Make sure you have node and npm installed on your machine. If you don't have node installed, you can download it [here](https://nodejs.org/en/download/). npm is installed with node.
 
 ## Available Scripts
 

@@ -6,8 +6,9 @@ import SiteHeader from './components/SiteHeader'
 import { XMarkIcon } from "@heroicons/react/24/outline";
 
 /**
- * Main posts view
- * @returns 
+ * The login component.
+ * 
+ * @returns {JSX.Element} The JSX code for the Login component.
  */
 const Login = () => {
   
@@ -18,6 +19,7 @@ const Login = () => {
   const navigate = useNavigate()
   const { user, login, error } = useAuth();
 
+  // redirect to courses page if user is already logged in
   useEffect(() => {
     if (user) {
       setSuccess('You are already logged in.');
@@ -27,6 +29,7 @@ const Login = () => {
     }
   }, [user, navigate]);
 
+  // handle login form submission
   const handleLoginSubmit = async (e: any) => {
     e.preventDefault()
     login({ email, password });

@@ -1,19 +1,27 @@
 import { createContext, useState, useContext, useEffect } from 'react';
 import { AuthContextType, User, AuthProviderProps } from './Types';
 
+// create context
 export const AuthContext = createContext<AuthContextType | null>(null);
-
+// create custom hook
 export const useAuth = () => {
     const context = useContext(AuthContext);
     if (!context) throw new Error('useAuth must be used within a AuthProvider');
     return context;
 };
-
+/**
+ * AuthProvider
+ * Handles user authentication
+ * 
+ * @param children
+ * @returns {JSX.Element}
+ */
 export const AuthProvider = ({ children }: AuthProviderProps) => {
     const [user, setUser] = useState<User | null>(null);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState('');
 
+    // check if user is logged in
     useEffect(() => {
         const auth = localStorage.getItem("auth");
         const email = localStorage.getItem("email");
@@ -24,6 +32,12 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
         setTimeout(() => setIsLoading(false), 500);
     }, []);
 
+    /**
+     * Register user
+     * 
+     * @param user
+     * @returns void
+     */
     const register = async (user: User) => {
         try {
             // api request
@@ -59,6 +73,12 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
         }
     };
 
+    /**
+     * Login user
+     * 
+     * @param user
+     * @returns void
+     */
     const login = async (user: User) => {
         try {
             // api request
@@ -94,6 +114,11 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
         }
     };
 
+    /**
+     * Logout user
+     * 
+     * @returns void
+     */
     const logout = () => {
         localStorage.removeItem("auth");
         localStorage.removeItem("email");

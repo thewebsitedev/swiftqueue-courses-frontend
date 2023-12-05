@@ -5,6 +5,12 @@ import Spinner from './components/Spinner';
 import Header from './components/Header';
 import { Fragment } from 'react';
 
+/**
+ * Protected route for authenticated users
+ *
+ * @param children
+ * @returns {JSX.Element}
+ */
 const AuthRoute = ({ children }: AuthRouteProps) => {
     const { user, isLoading } = useAuth();
 

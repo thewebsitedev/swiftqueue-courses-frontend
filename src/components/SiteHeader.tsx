@@ -6,6 +6,12 @@ import { Dialog } from "@headlessui/react";
 import { siteNavigation } from "../Helper";
 import { SiteHeaderProps } from "../Types";
 
+/**
+ * Site header
+ * 
+ * @param {SiteHeaderProps} props custom class names
+ * @returns {JSX.Element} global header
+ */
 const SiteHeader = ( props: SiteHeaderProps ) => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     return (

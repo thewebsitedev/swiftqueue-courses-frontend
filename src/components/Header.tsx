@@ -6,7 +6,13 @@ import { useAuth } from '../AuthContext'
 import logo from '../images/logo.svg'
 import { Link } from 'react-router-dom'
 
+/**
+ * Header component
+ * 
+ * @returns {JSX.Element} dashboard header
+ */
 const Header = () => {
+    // logout function from AuthContext
     const { logout } = useAuth();
 
     return (

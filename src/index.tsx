@@ -10,13 +10,13 @@ import Spinner from './components/Spinner';
 import Register from './Register';
 import Page404 from './components/Page404';
 
-// import reportWebVitals from './reportWebVitals';
-
+// lazy load components
 const Courses = React.lazy(() => import('./Courses'));
 const AddCourse = React.lazy(() => import('./AddCourse'));
 const EditCourse = React.lazy(() => import('./EditCourse'));
 const Course = React.lazy(() => import('./Course'));
 
+// create routes
 const router = createBrowserRouter([
   {
     path: "/",
@@ -63,11 +63,11 @@ const router = createBrowserRouter([
     element: <Page404 />,
   },
 ]);
-
+// root element
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
-
+// render the app
 root.render(
   <React.StrictMode>
     <AuthProvider>
@@ -75,8 +75,3 @@ root.render(
     </AuthProvider>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-// reportWebVitals();

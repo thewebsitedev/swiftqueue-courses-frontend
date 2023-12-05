@@ -1,6 +1,11 @@
 import { PlusIcon } from '@heroicons/react/20/solid'
 import { Link } from 'react-router-dom'
 
+/**
+ * Empty state for when there are no courses
+ * 
+ * @returns {JSX.Element} empty state html
+ */
 export default function EmptyState() {
   return (
     <div className="text-center my-6">

@@ -2,10 +2,11 @@ import { Link } from 'react-router-dom'
 import SiteHeader from './components/SiteHeader'
 
 /**
- * Main posts view
- * @returns 
+ * The main app component.
+ * 
+ * @returns {JSX.Element} The JSX code for the App component.
  */
-function App() {
+const App = () => {
   return (
     <div className="bg-white">
       <SiteHeader customClassNames="" />

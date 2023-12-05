@@ -1,5 +1,10 @@
 import { footerNavigation } from '../Helper';
 
+/**
+ * Footer component
+ * 
+ * @returns {JSX.Element} global footer
+ */
 const Foooter = () => {
     return (
         <footer aria-labelledby="footer-heading" className="bg-white">
