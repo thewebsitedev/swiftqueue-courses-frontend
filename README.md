@@ -34,6 +34,8 @@ This is a simple app that displays a list of courses and their details. It is bu
 
 Make sure you have node and npm installed on your machine. If you don't have node installed, you can download it [here](https://nodejs.org/en/download/). npm is installed with node.
 
+Also make sure you have the [Swiftqueue Courses API](https://github.com/thewebsitedev/swiftqueue-courses.git) running on your machine. You can clone the repository and follow the instructions in the README to get it running.
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -70,9 +72,3 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
