@@ -51,7 +51,7 @@ const Course = () => {
      */
     const fetchData = async (id: string) => {
         const response = await fetch(
-            `http://localhost:8888/swiftqueue-test/api/courses/?id=${id}`
+            `${process.env.REACT_APP_API_URL}/courses/?id=${id}`
         );
         if (!response.ok) throw new Error(response.statusText);
         return response.json();
@@ -69,7 +69,7 @@ const Course = () => {
     ) => {
         event.preventDefault();
         const response = await fetch(
-            `http://localhost:8888/swiftqueue-test/api/courses/index.php?id=${id}`,
+            `${process.env.REACT_APP_API_URL}/courses/index.php?id=${id}`,
             {
                 method: "DELETE",
             }

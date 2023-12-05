@@ -42,7 +42,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
         try {
             // api request
             const response = await fetch(
-                "http://localhost:8888/swiftqueue-test/api/users/index.php",
+                process.env.REACT_APP_API_URL + "/users/index.php",
                 {
                     method: "POST",
                     headers: {
@@ -83,7 +83,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
         try {
             // api request
             const response = await fetch(
-                "http://localhost:8888/swiftqueue-test/api/users/index.php",
+                process.env.REACT_APP_API_URL + "/users/index.php",
                 {
                     method: "POST",
                     headers: {

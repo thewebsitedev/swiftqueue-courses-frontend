@@ -72,7 +72,7 @@ const Courses = () => {
    * @returns Promise<Course[]>
    */
   const fetchData = async (status:string, sort:string, search:string) => {
-    const response = await fetch(`http://localhost:8888/swiftqueue-test/api/courses/?status=${status}&sort=${sort}&search=${search}`);
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/courses/?status=${status}&sort=${sort}&search=${search}`);
     if (!response.ok) throw new Error(response.statusText);
     return response.json();
   }

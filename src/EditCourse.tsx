@@ -35,7 +35,7 @@ const EditCourse = () => {
     useEffect(() => {
         const fetchCourse = async () => {
             const response = await fetch(
-                `http://localhost:8888/swiftqueue-test/api/courses/index.php?id=${id}`,
+                `${process.env.REACT_APP_API_URL}/courses/index.php?id=${id}`,
                 {
                     method: "GET",
                     headers: {
@@ -65,7 +65,7 @@ const EditCourse = () => {
      */
     const updateCourse = async () => {
         const response = await fetch(
-            "http://localhost:8888/swiftqueue-test/api/courses/index.php",
+            process.env.REACT_APP_API_URL + "/courses/index.php",
             {
                 method: "PUT",
                 headers: {
