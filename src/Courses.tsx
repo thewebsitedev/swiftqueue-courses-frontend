@@ -122,7 +122,7 @@ const Courses = () => {
       <Header />
 
       <main className="pb-24">
-        <div className="p-6 sm:flex sm:items-center sm:justify-between">
+        <div className="mx-auto max-w-7xl p-6 sm:flex sm:items-center sm:justify-between">
           <h3 className="text-base font-semibold leading-6 text-gray-900">Courses</h3>
           <div className="mt-3 sm:ml-4 sm:mt-0">
             <label htmlFor="mobile-search-candidate" className="sr-only">

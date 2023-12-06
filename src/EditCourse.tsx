@@ -184,10 +184,10 @@ const EditCourse = () => {
     return (
         <div className="min-h-full">
             <Header />
-            <main className="pb-24">
-                <div className="p-6 space-y-10 divide-y divide-gray-900/10">
+            <main className="py-12">
+                <div className="mx-auto max-w-7xl px-6 sm:px-8 space-y-10 divide-y divide-gray-900/10">
                     <div className="grid grid-cols-1 gap-x-8 gap-y-8 md:grid-cols-3">
-                        <div className="px-4 sm:px-0">
+                        <div className="px-0">
                             <h2 className="text-base font-semibold leading-7 text-gray-900">
                                 Edit Course
                             </h2>
@@ -199,10 +199,10 @@ const EditCourse = () => {
 
                         <form
                             onSubmit={handleFormSubmit}
-                            className="bg-white shadow-sm ring-1 ring-gray-900/5 sm:rounded-xl md:col-span-2"
+                            className="bg-white shadow-sm ring-1 ring-gray-900/5 rounded-md sm:rounded-xl md:col-span-2"
                         >
                             <div className="px-4 py-6 sm:p-8">
-                                <div className="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                                <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                                     <div className="sm:col-span-full">
                                         <label
                                             htmlFor="course-name"
@@ -211,7 +211,7 @@ const EditCourse = () => {
                                             Course Name
                                         </label>
                                         <div className="mt-2">
-                                            <div className="relative flex rounded-md shadow-sm ring-1 ring-inset focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                                            <div className="relative flex rounded-md shadow-sm ring-1 ring-inset focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600">
                                                 <input
                                                     type="text"
                                                     name="course-name"
@@ -266,7 +266,7 @@ const EditCourse = () => {
                                             Start Date
                                         </label>
                                         <div className="mt-2">
-                                            <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                                            <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600">
                                                 <input
                                                     type="datetime-local"
                                                     name="start-date"
@@ -306,7 +306,7 @@ const EditCourse = () => {
                                             End Date
                                         </label>
                                         <div className="mt-2">
-                                            <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                                            <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600">
                                                 <input
                                                     type="datetime-local"
                                                     name="end-date"

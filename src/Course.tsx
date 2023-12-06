@@ -102,8 +102,8 @@ const Course = () => {
             {!course && <Page404 />}
 
             {course && (
-                <main className="pb-24">
-                    <header className="relative isolate pt-16">
+                <main className="pb-12">
+                    <header className="relative isolate sm:pt-16">
                         <div
                             className="absolute inset-0 -z-10 overflow-hidden"
                             aria-hidden="true"
@@ -143,7 +143,7 @@ const Course = () => {
                                 <div className="flex items-center gap-x-4 sm:gap-x-6">
                                     <Link
                                         to={`/courses/${id}/edit`}
-                                        className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                        className=" hidden sm:block rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                                     >
                                         Edit
                                     </Link>
@@ -189,8 +189,8 @@ const Course = () => {
                                                 </Menu.Item>
                                                 <Menu.Item>
                                                     {({ active }) => (
-                                                        <a
-                                                            href="#"
+                                                        <Link
+                                                            to={`/courses/${id}/edit`}
                                                             className={classNames(
                                                                 active
                                                                     ? "bg-gray-50"
@@ -199,7 +199,7 @@ const Course = () => {
                                                             )}
                                                         >
                                                             Edit
-                                                        </a>
+                                                        </Link>
                                                     )}
                                                 </Menu.Item>
                                             </Menu.Items>
@@ -209,9 +209,8 @@ const Course = () => {
                             </div>
                         </div>
                     </header>
-                    <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-                        <div className="mx-auto grid max-w-2xl grid-cols-1 grid-rows-1 items-start gap-x-8 gap-y-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-                            {/* Invoice summary */}
+                    <div className="mx-auto max-w-7xl px-4 pt-12 sm:px-6 lg:px-8">
+                        <div className="mx-auto lg:mx-0 lg:max-w-none">
                             <div className="lg:col-start-3 lg:row-end-1">
                                 <h2 className="sr-only">Summary</h2>
                                 <div className="rounded-lg bg-gray-50 shadow-sm ring-1 ring-gray-900/5">

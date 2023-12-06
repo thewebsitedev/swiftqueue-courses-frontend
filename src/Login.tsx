@@ -145,7 +145,7 @@ const Login = () => {
           </div>}
           {''!==success && <div className="w-full max-w-sm space-y-10 bg-white p-6 rounded-md shadow-sm">
             <div>
-              <h2 className="text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+              <h2 className="text-center text-lg sm:text-2xl font-bold leading-9 tracking-tight text-gray-900">
                 You are logged in. Redirecting to courses page...
               </h2></div>
             </div>}
